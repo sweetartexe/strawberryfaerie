@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart · Strawberry Faerie</title>
+  <meta name="description" content="Your Strawberry Faerie basket.">
+  <!-- TODO: set og:url / og:image to absolute URLs once the custom domain is live -->
+  <meta property="og:title" content="Cart · Strawberry Faerie">
+  <meta property="og:description" content="Your Strawberry Faerie basket.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta name="theme-color" content="#fbeaea">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cart">
+  <!-- Reusable hand-drawn-ish SVG pieces -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="leaf" viewBox="0 0 24 12"><path d="M1 6 C6 0 16 0 23 6 C16 12 6 12 1 6 Z" /><path d="M2 6 H21" fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".8"/></symbol>
+      <symbol id="berry" viewBox="0 0 20 22"><path d="M10 21 C4 18 1 12 2.5 8 C4 5 7 5.5 10 6.5 C13 5.5 16 5 17.5 8 C19 12 16 18 10 21 Z" fill="#d98f99"/><path d="M5 6.5 L7.5 2.5 L10 5.5 L12.5 2.5 L15 6.5 C12 5 8 5 5 6.5Z" fill="#8fa98a"/><g fill="#fff3e0"><circle cx="7" cy="10" r=".7"/><circle cx="10.5" cy="9.5" r=".7"/><circle cx="13.5" cy="11" r=".7"/><circle cx="8.5" cy="13.5" r=".7"/><circle cx="12" cy="14" r=".7"/><circle cx="10" cy="17" r=".7"/></g></symbol>
+      <symbol id="sparkle" viewBox="0 0 20 20"><path d="M10 0 C11 7 13 9 20 10 C13 11 11 13 10 20 C9 13 7 11 0 10 C7 9 9 7 10 0Z"/></symbol>
+      <symbol id="vine" viewBox="0 0 320 40">
+        <path d="M6 22 C40 6 70 36 104 20 S168 6 200 22 S270 36 314 18" fill="none" stroke="#8fa98a" stroke-width="1.6" stroke-linecap="round"/>
+        <g fill="#a9bfa3">
+          <use href="#leaf" x="40" y="8" width="20" height="10" transform="rotate(-25 50 13)"/>
+          <use href="#leaf" x="78" y="24" width="18" height="9" transform="rotate(20 87 28)"/>
+          <use href="#leaf" x="222" y="22" width="18" height="9" transform="rotate(25 231 26)"/>
+          <use href="#leaf" x="262" y="10" width="20" height="10" transform="rotate(-20 272 15)"/>
+        </g>
+        <use href="#berry" x="150" y="8" width="20" height="22"/>
+        <g fill="#e2b866"><use href="#sparkle" x="126" y="4" width="8" height="8"/><use href="#sparkle" x="186" y="26" width="7" height="7"/></g>
+        <g fill="#d98f99"><use href="#sparkle" x="18" y="28" width="6" height="6"/><use href="#sparkle" x="296" y="4" width="6" height="6"/></g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Strawberry Faerie home">
+        <!-- LOGO SLOT: to swap the logo, replace assets/logo.png -->
+        <img class="brand-logo" src="assets/logo.png" alt="" width="480" height="480">
+        <span class="brand-text">
+          <span class="brand-name">Strawberry Faerie</span>
+          <span class="brand-sub">Homemade Goods</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="markets.html">Markets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-button" href="cart.html" aria-label="Cart, 0 items" data-cart-button aria-current="page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.3 10.2a2 2 0 0 1-2 1.8H8.3a2 2 0 0 1-2-1.8L5 8Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <svg class="float float-1" aria-hidden="true"><use href="#sparkle"/></svg>
+      <svg class="float float-2" aria-hidden="true"><use href="#sparkle"/></svg>
+      <div class="wrap">
+        <p class="eyebrow">Your Basket</p>
+        <h1 id="page-title">Cart</h1>
+        <p class="section-lede">Online checkout is coming soon. For now, email or call us to place an order.</p>
+      </div>
+    </section>
+    <section class="section section-top-tight" aria-label="Cart items">
+      <div class="wrap cart-wrap">
+        <div data-cart-page>
+          <p class="cart-empty">Loading your basket…</p>
+        </div>
+        <noscript><p class="notice">The cart needs JavaScript.</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <svg class="footer-vine" viewBox="0 0 320 40" aria-hidden="true"><use href="#vine"/></svg>
+      <p class="footer-brand">Strawberry Faerie <span>Homemade Goods</span></p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="shop.html">Shop</a><a href="about.html">About</a><a href="markets.html">Markets</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a>
+      </nav>
+      <p class="footer-tag">Handmade in the forest (and in Texas) with love</p>
+      <p class="footer-copy">© 2026 Strawberry Faerie. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/visual-editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strawberry Faerie · Homemade Goods from Texas</title>
+  <meta name="description" content="Strawberry Faerie: homemade soaps, resin trinkets, seasonal goods, jams, jellies and fresh-baked treats, handmade in Texas.">
+  <!-- TODO: set og:url / og:image to absolute URLs once the custom domain is live -->
+  <meta property="og:title" content="Strawberry Faerie · Homemade Goods from Texas">
+  <meta property="og:description" content="Strawberry Faerie: homemade soaps, resin trinkets, seasonal goods, jams, jellies and fresh-baked treats, handmade in Texas.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta name="theme-color" content="#fbeaea">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="index">
+  <!-- Reusable hand-drawn-ish SVG pieces -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="leaf" viewBox="0 0 24 12"><path d="M1 6 C6 0 16 0 23 6 C16 12 6 12 1 6 Z" /><path d="M2 6 H21" fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".8"/></symbol>
+      <symbol id="berry" viewBox="0 0 20 22"><path d="M10 21 C4 18 1 12 2.5 8 C4 5 7 5.5 10 6.5 C13 5.5 16 5 17.5 8 C19 12 16 18 10 21 Z" fill="#d98f99"/><path d="M5 6.5 L7.5 2.5 L10 5.5 L12.5 2.5 L15 6.5 C12 5 8 5 5 6.5Z" fill="#8fa98a"/><g fill="#fff3e0"><circle cx="7" cy="10" r=".7"/><circle cx="10.5" cy="9.5" r=".7"/><circle cx="13.5" cy="11" r=".7"/><circle cx="8.5" cy="13.5" r=".7"/><circle cx="12" cy="14" r=".7"/><circle cx="10" cy="17" r=".7"/></g></symbol>
+      <symbol id="sparkle" viewBox="0 0 20 20"><path d="M10 0 C11 7 13 9 20 10 C13 11 11 13 10 20 C9 13 7 11 0 10 C7 9 9 7 10 0Z"/></symbol>
+      <symbol id="vine" viewBox="0 0 320 40">
+        <path d="M6 22 C40 6 70 36 104 20 S168 6 200 22 S270 36 314 18" fill="none" stroke="#8fa98a" stroke-width="1.6" stroke-linecap="round"/>
+        <g fill="#a9bfa3">
+          <use href="#leaf" x="40" y="8" width="20" height="10" transform="rotate(-25 50 13)"/>
+          <use href="#leaf" x="78" y="24" width="18" height="9" transform="rotate(20 87 28)"/>
+          <use href="#leaf" x="222" y="22" width="18" height="9" transform="rotate(25 231 26)"/>
+          <use href="#leaf" x="262" y="10" width="20" height="10" transform="rotate(-20 272 15)"/>
+        </g>
+        <use href="#berry" x="150" y="8" width="20" height="22"/>
+        <g fill="#e2b866"><use href="#sparkle" x="126" y="4" width="8" height="8"/><use href="#sparkle" x="186" y="26" width="7" height="7"/></g>
+        <g fill="#d98f99"><use href="#sparkle" x="18" y="28" width="6" height="6"/><use href="#sparkle" x="296" y="4" width="6" height="6"/></g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Strawberry Faerie home">
+        <!-- LOGO SLOT: to swap the logo, replace assets/logo.png -->
+        <img class="brand-logo" src="assets/logo.png" alt="" width="480" height="480">
+        <span class="brand-text">
+          <span class="brand-name">Strawberry Faerie</span>
+          <span class="brand-sub">Homemade Goods</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="visually-hidden">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" class="is-active" aria-current="page">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="markets.html">Markets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="cart-button" href="cart.html" aria-label="Cart, 0 items" data-cart-button>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.3 10.2a2 2 0 0 1-2 1.8H8.3a2 2 0 0 1-2-1.8L5 8Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="cart-count" data-cart-count>0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <svg class="float float-1" aria-hidden="true"><use href="#sparkle"/></svg>
+      <svg class="float float-2" aria-hidden="true"><use href="#sparkle"/></svg>
+      <svg class="float float-3" aria-hidden="true"><use href="#berry"/></svg>
+      <div class="wrap hero-inner">
+        <img class="hero-logo" src="assets/logo.png" alt="Strawberry Faerie, Homemade Goods: round logo of a faerie in a flower crown holding a strawberry" width="480" height="480">
+        <h1 id="hero-title" class="hero-title">Strawberry Faerie</h1>
+        <p class="hero-sub">Homemade Goods</p>
+        <!-- EDITABLE: hero tagline -->
+        <p class="hero-tagline">Fresh-baked goodness, made by hand in a Texas kitchen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="shop.html">Shop the goods</a>
+          <a class="btn btn-ghost" href="markets.html">Find us at markets</a>
+        </div>
+      </div>
+    </section>
+
+    <svg class="divider" viewBox="0 0 320 40" aria-hidden="true"><use href="#vine"/></svg>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">The Pantry &amp; Trinket Shelf</p>
+          <h2 id="featured-title">What we make</h2>
+          <p class="section-lede">Explore our homemade goods. Products are coming soon!</p>
+        </header>
+        <ul class="category-links" data-category-links></ul>
+        <noscript><p class="center"><a class="btn btn-primary" href="shop.html">Visit the shop</a></p></noscript>
+        <p class="center"><a class="btn btn-ghost" href="shop.html">Browse the shop</a></p>
+      </div>
+    </section>
+
+    <svg class="divider" viewBox="0 0 320 40" aria-hidden="true"><use href="#vine"/></svg>
+
+    <section class="section section-tint" aria-labelledby="about-teaser-title">
+      <div class="wrap about">
+        <div class="about-art" aria-hidden="true">
+          <img src="assets/faerie-art.png" alt="" width="356" height="356" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">A Little Story</p>
+          <h2 id="about-teaser-title">From our home, To your table.</h2>
+          <!-- EDITABLE: short about teaser -->
+          <p>At Strawberry Faerie, a little bit of magic goes into everything we make. From homemade treats and small-batch preserves to handcrafted treasures, each creation is made with love, creativity, and a touch of whimsy. Our hope is to bring a little sweetness and wonder into your everyday life.</p>
+          <p><a class="text-link" href="about.html">Read our story &amp; café dream →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <svg class="divider" viewBox="0 0 320 40" aria-hidden="true"><use href="#vine"/></svg>
+
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Kind Words</p>
+          <h2 id="reviews-title">Customer Reviews</h2>
+        </header>
+        <!-- Reviews copied verbatim from the Strawberry Faerie Facebook page. -->
+        <div class="reviews">
+          <figure class="review-card review-featured">
+            <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+            <blockquote class="review-quote"><p>We stopped at mistletoe market yesterday to check out the vendors when we came across Strawberry Faerie! She had a very limited stock which, for me it meant something good!</p></blockquote>
+            <figcaption class="review-by"><span class="review-name">Jade Lynn Thompson</span> <time class="review-date" datetime="2024-11">November 2024</time></figcaption>
+          </figure>
+          <div class="review-grid">
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>Amazing taste and very unique! You will not be disappointed. Loved getting to try all the yummy flavors.</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Ashley Gibson Rangel</span> <time class="review-date" datetime="2026-03">March 2026</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>Tasted at Crunch fitness and so delicious and of course I had to purchase the strawberry jam . Cant wait to spread it on my bagel and toast in the mornings 😄</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Maria Calvo-Gonzalez</span> <time class="review-date" datetime="2026-03">March 2026</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>Tried the plum jelly with a snickerdoodle cookie and both were fantastic. Never thought of that combo but definitely compliments each other.</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Lee Ann Andrews</span> <time class="review-date" datetime="2024-11">November 2024</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>so I've tried the strawberry rose jelly absolutely delightful</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Isialina Marie</span> <time class="review-date" datetime="2026-04">April 2026</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>Sweetest couple ever! Trying out the pineapple pepper jelly for wing Wednesday!</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Jamie Hood</span> <time class="review-date" datetime="2026-04">April 2026</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>Awesome all natural jammies!! A must try!</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Melissa McClory</span> <time class="review-date" datetime="2026-04">April 2026</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>Will definitely come out again, cake I ate was sweet soft and moist!!!!!and I’m not from here 🙌🏼and would come back again for some more tasty stuff!!!😊</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Tony Enriquez</span> <time class="review-date" datetime="2025-03">March 2025</time></figcaption>
+            </figure>
+            <figure class="review-card">
+              <p class="review-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.6 7.6 3.8 4.5 7.1 4.5c2 0 3.6 1.1 4.9 2.9 1.3-1.8 2.9-2.9 4.9-2.9 3.3 0 5.5 3.1 4.3 6.6-1.7 4.8-9.2 9.4-9.2 9.4Z" fill="currentColor"/></svg>Recommends</p>
+              <blockquote class="review-quote"><p>The jellys tasted absolutely amazing</p></blockquote>
+              <figcaption class="review-by"><span class="review-name">Hayden Barrow</span> <time class="review-date" datetime="2026-04">April 2026</time></figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="reviews-fb"><a class="text-link" href="https://www.facebook.com/strawberryfaerieco/reviews/" target="_blank" rel="noopener">Recommended by 94% of reviewers on Facebook<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+      </div>
+    </section>
+
+    <svg class="divider" viewBox="0 0 320 40" aria-hidden="true"><use href="#vine"/></svg>
+
+    <section class="section" aria-labelledby="next-market-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Come Find Us</p>
+          <h2 id="next-market-title">Next market</h2>
+        </header>
+        <!-- TODO (Arti): confirm dates, times, and addresses before publishing. -->
+        <ol class="market-list">
+          <li class="market-card">
+            <div class="market-date" aria-hidden="true"><span class="m-mon">Nov</span><span class="m-day">21</span><span class="m-dow">Sat</span></div>
+            <div class="market-body">
+              <h3>VFW Winter Wonderland</h3>
+              <p class="market-when"><time datetime="2026-11-21T10:00">Saturday, November 21, 2026</time><br>10am–4pm</p>
+              <p class="market-where">VFW Post 2775 · 5303 N. 16th St, Orange, TX</p>
+              <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=VFW+Post+2775+5303+N+16th+St+Orange+TX" target="_blank" rel="noopener">Get directions<span class="visually-hidden"> to VFW Winter Wonderland (opens in a new tab)</span></a>
+            </div>
+          </li>
+        </ol>
+        <p class="center"><a class="text-link" href="markets.html">See all markets &amp; events →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <svg class="footer-vine" viewBox="0 0 320 40" aria-hidden="true"><use href="#vine"/></svg>
+      <p class="footer-brand">Strawberry Faerie <span>Homemade Goods</span></p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="shop.html">Shop</a><a href="about.html">About</a><a href="markets.html">Markets</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a>
+      </nav>
+      <p class="footer-tag">Handmade in the forest (and in Texas) with love</p>
+      <p class="footer-copy">© 2026 Strawberry Faerie. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/visual-editor.js"></script>
+</body>
+</html>

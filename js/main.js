@@ -200,18 +200,32 @@
         }
         if (p.preorderTrial) {
           var controls = el("div", "product-order");
+          var button = el("button", "btn btn-primary", "Order"); button.type = "button";
+          button.setAttribute("aria-expanded", "false");
+          var qtyPanel = el("div", "order-quantity-panel");
+          qtyPanel.hidden = true;
           var label = el("label", "", "Quantity");
           var input = el("input", "order-qty-input");
           input.type = "number"; input.min = "1"; input.max = "99"; input.step = "1"; input.value = "1"; input.id = "qty-" + p.id;
           label.htmlFor = input.id;
-          var button = el("button", "btn btn-primary", "Order"); button.type = "button";
+          var addButton = el("button", "btn btn-primary", "Add to Cart"); addButton.type = "button";
           button.addEventListener("click", function () {
+            qtyPanel.hidden = !qtyPanel.hidden;
+            button.setAttribute("aria-expanded", String(!qtyPanel.hidden));
+            if (!qtyPanel.hidden) input.focus();
+          });
+          addButton.addEventListener("click", function () {
             var n = Number(input.value);
             if (!Number.isInteger(n) || n < 1 || n > 99) { input.setCustomValidity("Choose 1 to 99 jars."); input.reportValidity(); return; }
-            input.setCustomValidity(""); addToCart(p.id, n);
+            input.setCustomValidity("");
+            addToCart(p.id, n);
+            qtyPanel.hidden = true;
+            button.setAttribute("aria-expanded", "false");
+            input.value = "1";
           });
           input.addEventListener("input", function () { input.setCustomValidity(""); });
-          controls.appendChild(label); controls.appendChild(input); controls.appendChild(button);
+          qtyPanel.appendChild(label); qtyPanel.appendChild(input); qtyPanel.appendChild(addButton);
+          controls.appendChild(button); controls.appendChild(qtyPanel);
           body.appendChild(controls);
           body.appendChild(el("p", "order-trial-note", "Trial only · No payment or preorder submitted."));
         }

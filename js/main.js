@@ -68,9 +68,10 @@
     if (countEl) { countEl.textContent = n; countEl.classList.toggle("has-items", n > 0); }
     if (btn) btn.setAttribute("aria-label", "Cart, " + n + (n === 1 ? " item" : " items"));
   }
-  function addToCart(id) {
+  function addToCart(id, quantity) {
+    quantity = Number.isInteger(quantity) && quantity > 0 ? Math.min(quantity, 99) : 1;
     var line = cart.find(function (i) { return i.id === id; });
-    if (line) line.qty += 1; else cart.push({ id: id, qty: 1 });
+    if (line) line.qty = Math.min(99, line.qty + quantity); else cart.push({ id: id, qty: quantity });
     saveCart();
     toast("Added to your basket! Online checkout is coming soon.");
   }
@@ -196,6 +197,23 @@
           lab.appendChild(el("dt", "", "Allergens"));
           lab.appendChild(el("dd", "", p.allergens || "To be added"));
           body.appendChild(lab);
+        }
+        if (p.preorderTrial) {
+          var controls = el("div", "product-order");
+          var label = el("label", "", "Quantity");
+          var input = el("input", "order-qty-input");
+          input.type = "number"; input.min = "1"; input.max = "99"; input.step = "1"; input.value = "1"; input.id = "qty-" + p.id;
+          label.htmlFor = input.id;
+          var button = el("button", "btn btn-primary", "Order"); button.type = "button";
+          button.addEventListener("click", function () {
+            var n = Number(input.value);
+            if (!Number.isInteger(n) || n < 1 || n > 99) { input.setCustomValidity("Choose 1 to 99 jars."); input.reportValidity(); return; }
+            input.setCustomValidity(""); addToCart(p.id, n);
+          });
+          input.addEventListener("input", function () { input.setCustomValidity(""); });
+          controls.appendChild(label); controls.appendChild(input); controls.appendChild(button);
+          body.appendChild(controls);
+          body.appendChild(el("p", "order-trial-note", "Trial only · No payment or preorder submitted."));
         }
         card.appendChild(body);
         gridEl.appendChild(card);

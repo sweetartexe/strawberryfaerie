@@ -336,3 +336,6 @@ a.cart-button { text-decoration: none; }
 
 /* Apple butter cart trial */
 .product-order{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-top:auto;padding-top:1rem}.order-qty-input{width:65px;padding:.7rem .3rem;border:1px solid var(--line);border-radius:12px;font:inherit;text-align:center}.product-order label{font-weight:700;color:var(--rose-deep)}.product-order .btn{flex:1;min-width:95px}.order-trial-note{font-size:.8rem;color:var(--ink-soft);margin:.6rem 0 0}
+
+/* Collapsible quantity selection */
+.order-quantity-panel[hidden]{display:none!important}.order-quantity-panel{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem;width:100%;padding-top:.65rem}.product-order{display:flex;flex-direction:column;align-items:stretch}.product-order>button{align-self:stretch}

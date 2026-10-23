@@ -333,3 +333,6 @@ a.cart-button { text-decoration: none; }
   .review-featured { padding: 2.5rem 3rem 1.6rem; }
 }
 .reviews-fb { text-align: center; margin: 1.75rem 0 0; }
+
+/* Apple butter cart trial */
+.product-order{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-top:auto;padding-top:1rem}.order-qty-input{width:65px;padding:.7rem .3rem;border:1px solid var(--line);border-radius:12px;font:inherit;text-align:center}.product-order label{font-weight:700;color:var(--rose-deep)}.product-order .btn{flex:1;min-width:95px}.order-trial-note{font-size:.8rem;color:var(--ink-soft);margin:.6rem 0 0}

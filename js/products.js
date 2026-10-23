@@ -77,7 +77,7 @@ function sfPlaceholder(category, n, food) {
 
 window.SF_PRODUCTS = [
   sfPlaceholder("seasonal", 1), sfPlaceholder("seasonal", 2), sfPlaceholder("seasonal", 3),
-  sfPlaceholder("jams", 1, true), sfPlaceholder("jams", 2, true), sfPlaceholder("jams", 3, true),
+  { id:"apple-butter", category:"jams", name:"Apple Butter", price:null, description:"Small-batch apple butter, slow-cooked with cozy autumn flavor.", image:null, imageAlt:"", ingredients:"To be confirmed", allergens:"To be confirmed", preorderTrial:true }, sfPlaceholder("jams", 2, true), sfPlaceholder("jams", 3, true),
   sfPlaceholder("baked", 1, true), sfPlaceholder("baked", 2, true), sfPlaceholder("baked", 3, true)
 
   /* Example of a real item (copy, edit, and remove `placeholder`):
